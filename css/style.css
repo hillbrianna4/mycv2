@@ -1,0 +1,230 @@
+:root{--baby-color:#c3aed6;
+  --primary-color:#fcc8f8;
+  
+  --grid-color:#efbbcf;
+  --text-color:#f8e4dd;
+  --border-color:#fe91ca;
+  
+}
+
+body{
+background-color:var(--baby-color);
+    font-family: 'David Libre', serif;
+font-family: 'El Messiri', sans-serif;
+font-family: 'Fascinate', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Vidaloka', serif;
+
+}
+h1{
+    font: size 20px;
+    font-weight:700px;
+    color:var(--text-color);
+    text-align: center;
+    
+}
+p{
+    color:var(--text-color);
+}
+a {
+    color: var(--text-color);
+  }
+  
+  a:hover {
+    
+    text-decoration: none;
+  }
+  button {
+   
+    border: none;
+    
+    font-family: inherit;
+    
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    
+    padding: 10px;
+    border-radius: 3px;
+    
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  button:hover, button:focus {
+   
+    cursor: pointer;
+ 
+    opacity: 0.8;
+  }
+    .portrait{
+      float:left;
+      width: 400px;
+      height:250px;
+      margin-right:40px;
+      border-radius:90%;
+    }
+
+    .profile{
+      max-width: 700px;
+      margin:0 auto;
+      
+    }
+    .page-footer {
+      clear: both;
+      display: flex;
+  }
+
+  .grid{
+    
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    grid-gap:20px;
+    padding:10px;
+    margin:5px 10px;
+    border: color var(--border-color) 1px solid ;
+    display: inline-block;
+    float: left;
+    width: 400px;
+    height: 200px;
+    grid-column-start: 3;
+    grid-row-end: 1;
+    background-color:var(--grid-color);
+    min-height: auto;
+  }
+   
+
+    
+    
+    
+  
+  
+  
+  
+  
+  button,
+  .button1,
+  .button2,
+  .button3,
+  .my-input {
+  /* your styling goes here */
+  }
+  button,
+.button {
+/* your styling goes here */  
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+/* your styling goes here */  
+}
+.button, button{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: color:var(var(--baby-color));
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun{
+  position: center;
+  text-align: center;
+
+
+  
+
+    animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation: 4s color-change infinite alternate linear;
+  }
+  p{
+    text-align: center;
+  }
+
+  .about{
+    text-align: center;
+    color: #f7dad9;
+  }
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+  
+  .cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+  @media all and (max-width: 750px){
+    /* shared code */
+  }
+  
